@@ -5,10 +5,31 @@ msmtp cookbook
 
 The msmtp cookbook installs the SMTP client msmtp.
 
-Usage
------
+## Platform Support
+
+* Debian
+
+
+## Attributes
+
+* node['msmtp']['host'] - String. SMTP smarthost.
+* node['msmtp']['port'] - Integer. override the mail submission port instead of SMTP port 25.
+* node['msmtp']['auth'] - String. authentication enabled. Valid configurations "on", "off".
+* node['msmtp']['user'] - String. user to authenticate as to SMTP server.
+* node['msmtp']['password'] - String. This stores the password directly in the file. It's generally not recommended to store passwords in plain text files.
+* node['msmtp']['from'] - String. Envelope-from address.
+* node['msmtp']['aliases'] - Hash.  List of forwarding email address.
+
+
+## Recipes
+
+* `msmtp::default` - Installs msmtp-mta package, configures `/etc/msmtprc` and `/etc/aliases.msmtp`.
+
+## Usage
 
 ### `msmtp::default` recipe
+
+Include the `msmtp::default` in your run_list and in your wrapper cookbook ensure that you have the appropriate attributes configured.
 
 ```
     "msmtp": {
