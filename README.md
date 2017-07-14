@@ -3,6 +3,8 @@ msmtp cookbook
 [![Cookbook](https://img.shields.io/cookbook/v/msmtp.svg)](https://supermarket.getchef.com/cookbooks/msmtp)
 [![Build Status](https://travis-ci.org/infertux/chef-msmtp.svg?branch=master)](https://travis-ci.org/infertux/chef-msmtp)
 
+The msmtp cookbook installs the SMTP client msmtp.
+
 Usage
 -----
 
